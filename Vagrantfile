@@ -68,11 +68,9 @@ Vagrant.configure(2) do |config|
     sudo apt-get -y update
     sudo apt-get -y install zlib1g-dev make g++ ctorrent git unzip docker.io docker
     git clone https://github.com/gebi/libowfat
-    cd libowfat && make && cd
+    cd libowfat && make && cd $HOME
     git clone git://erdgeist.org/opentracker
-    cd opentracker
-    make && cd
-    wget http://storage.googleapis.com/docket/docket.zip
-    unzip docket.zip
+    cd opentracker && make && cd $HOME
+    wget http://storage.googleapis.com/docket/docket.zip &&unzip docket.zip
   SHELL
 end
